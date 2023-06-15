@@ -16,4 +16,9 @@ class SourceEntity {
 	{
 		return $this->value;
 	}
+
+	public function getId() : int
+	{
+		return $this->value;
+	}
 }

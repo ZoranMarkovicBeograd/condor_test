@@ -12,8 +12,3 @@ $router->put('/update', AnalyticsController::class, 'updateAction');
 $router->delete('/delete', AnalyticsController::class, 'destroyAction');
 
 $router->dispatch();
-
-
-
-
-

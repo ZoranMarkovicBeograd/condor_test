@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Routes;
 
 class Router
@@ -10,21 +11,21 @@ class Router
         $this->loadRoutes();
     }
 
-    public function get($path, $controller, $action)
+    public function get(string $path, $controller, string $action)
     {
         $this->addRoute('GET', $path, $controller, $action);
     }
-    public function post($path, $controller, $action)
+    public function post(string $path, $controller, string $action)
     {
         $this->addRoute('POST', $path, $controller, $action);
     }
 
-    public function put($path, $controller, $action)
+    public function put(string $path, $controller, string $action)
     {
         $this->addRoute('PUT', $path, $controller, $action);
     }
 
-    public function delete($path, $controller, $action)
+    public function delete(string $path, $controller, string $action)
     {
         $this->addRoute('DELETE', $path, $controller, $action);
     }
@@ -54,6 +55,6 @@ class Router
         $this->routes[$method][$path] = [
             'controller' => $controller,
             'action' => $action
-         ];
+        ];
     }
 }
