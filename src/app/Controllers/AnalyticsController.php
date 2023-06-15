@@ -6,6 +6,7 @@ use App\Domain\SourceProvider;
 use App\Domain\Sources\AmazonAnalytics;
 use App\Domain\Sources\GoogleAnalytics;
 use App\Domain\Sources\PositiveGuys;
+use App\Response\Response;
 
 class AnalyticsController{
     
@@ -30,7 +31,36 @@ class AnalyticsController{
             ];
         }
 
-        echo json_encode($response); die;
+        Response::json($response);
+    }
 
+    public function storeAction()
+    {
+            $response = [
+                "error" => false,
+                "message" => "Data are saved!",
+            ];
+        // TODO: The logic for saving data.
+        Response::json($response);
+    }
+    
+    public function updateAction()
+    {
+            $response = [
+                "error" => false,
+                "message" => "Data are updated!",
+            ];
+        // TODO: The logic for updating data.
+        Response::json($response);
+    }
+
+    public function destroyAction()
+    {
+            $response = [
+                "error" => false,
+                "message" => "Data are deleted!",
+            ];
+        // TODO: The logic for deleting data.
+        Response::json($response);
     }
 }
